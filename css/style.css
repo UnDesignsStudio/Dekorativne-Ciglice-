@@ -1921,6 +1921,12 @@ a:focus {
     color: #ffffff;
     background: #4f3a24;
 }
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
 
 
 /*******************************/
