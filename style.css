@@ -1620,14 +1620,21 @@ a:focus {
     position: relative;
     overflow: hidden;
     flex-grow: 1;
+    width: 100%;
+    height: 250px; /* Ili 300px ako ti više odgovara */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio .portfolio-img img {
     width: 100%;
-    transition: .3s;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
     display: block;
 }
+
 
 .portfolio .portfolio-item:hover img {
     transform: scale(1.1);
