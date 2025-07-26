@@ -1703,7 +1703,32 @@ a:focus {
     border-radius: 0;
     transition: .3s;
 }
+/* Prilagodi prikaz lightbox slike */
+.lb-outerContainer {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+}
 
+.lb-image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 90vh !important;
+  object-fit: contain !important;
+}
+
+/* Override Lightbox dimenzija */
+.lb-outerContainer {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+}
+
+.lb-image {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
 
 
 /*******************************/
