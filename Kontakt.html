@@ -8,7 +8,7 @@
         <meta content="Construction Company Website Template" name="description">
 
         <!-- Logo -->
-        <link href="img/Dekorativne Ciglice.png" rel="icon" type="image/png">
+        <link href="img/dekorativnelogo.png" rel="icon" type="image/png">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Pošaljite nam mejl</h3>
-                                            <p>dekorativneciglice@gmail.com</p>
+                                            <p>elnidzakalaba83@gmail.com</p>
                                             </div>
                                     </div>
                                 </div>
@@ -101,10 +101,10 @@
                                     <div class="dropdown-menu">
                                     </div>
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link">Kontakt</a>
+                                <a href="Kontakt.html" class="nav-item nav-link">Kontakt</a>
                             </div>
                             <div class="ml-auto">
-                                <a class="btn" href="#">Kontaktirajte Nas</a>
+                                <a class="btn" href="mailto:elnidzakalaba83@gmail.com">Kontaktirajte Nas</a>
                             </div>
                         </div>
                     </nav>
@@ -156,34 +156,30 @@
                                     <i class="flaticon-send-mail"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>dekorativneciglice@gmail.com</p>
+                                        <p>elnidzakalaba83@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Vaše ime" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Vaš Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Naslov" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Upit" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Pošalji poruku</button>
-                                    </div>
+<div class="contact-form">
+  <div class="control-group">
+    <input type="text" class="form-control" id="name" placeholder="Vaše ime" required />
+  </div>
+  <div class="control-group">
+    <input type="email" class="form-control" id="email" placeholder="Vaš Email" required />
+  </div>
+  <div class="control-group">
+    <input type="text" class="form-control" id="subject" placeholder="Naslov" required />
+  </div>
+  <div class="control-group">
+    <textarea class="form-control" id="message" placeholder="Upit" required></textarea>
+  </div>
+  <div>
+    <button class="btn" onclick="sendMail()">Pošalji poruku</button>
+  </div>
+</div>
+
                                 </form>
                             </div>
                         </div>
@@ -287,5 +283,19 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+  function sendMail() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const body = `Ime: ${name}%0DEmail: ${email}%0DPoruka: ${message}`;
+    const mailtoLink = `mailto:elnidzakalaba83@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+    window.open(mailtoLink, "_blank");
+  }
+</script>
+
     </body>
 </html>
