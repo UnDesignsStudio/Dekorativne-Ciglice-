@@ -135,11 +135,3 @@
     
 })(jQuery);
 
-<script>
-  lightbox.option({
-    'fitImagesInViewport': true,
-    'maxWidth': 1000,
-    'maxHeight': 800
-  })
-</script>
-
